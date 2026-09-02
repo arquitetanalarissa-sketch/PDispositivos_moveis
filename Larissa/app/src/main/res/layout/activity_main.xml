@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/logo_curso" />
+
+    <TextView
+        android:id="@+id/tvInstituicao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sua Faculdade"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/tvNomeCurso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Análise e Desenvolvimento de Sistemas"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tvDescricaoBreve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Curso focado no desenvolvimento de software e soluções tecnológicas."
+        android:textAlignment="center"
+        android:layout_marginTop="12dp" />
+
+    <!-- Espaçador simples para empurrar os botões para baixo -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btnConhecaCurso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Conheça o curso" />
+
+    <Button
+        android:id="@+id/btnDisciplinasHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Disciplinas"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

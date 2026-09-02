@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/imgBanner"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/banner_curso" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sobre o Curso"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duração: 2,5 anos | Modalidade: Presencial / EAD"
+        android:textStyle="italic"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="O curso prepara o estudante para criar programas, aplicativos móveis, gerenciar bancos de dados e projetar arquiteturas de software modernas."
+        android:layout_marginTop="12dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btnVoltarHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Voltar para Home" />
+
+    <Button
+        android:id="@+id/btnIrDisciplinas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ir para Disciplinas"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>
