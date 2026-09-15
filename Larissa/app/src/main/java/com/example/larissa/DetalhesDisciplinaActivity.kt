@@ -12,6 +12,7 @@ class DetalhesDisciplinaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detalhes_disciplina)
 
         // 1. Mapear componentes do XML
+        val btnCompartilhar = findViewById<Button>(R.id.btnCompartilhar)
         val tvNome = findViewById<TextView>(R.id.tvNomeDisciplina)
         val tvCarga = findViewById<TextView>(R.id.tvCargaHoraria)
         val tvModalidade = findViewById<TextView>(R.id.tvModalidade)
@@ -40,5 +41,16 @@ class DetalhesDisciplinaActivity : AppCompatActivity() {
         btnVoltar.setOnClickListener {
             finish()
         }
-    }
-}
+
+        // 5. Ação do Botão Compartilhar (Desafio Final - Parte 10)
+        btnCompartilhar.setOnClickListener {
+            val sendIntent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, "Estou cursando $nome no curso!")
+                type = "text/plain"
+            }
+            val shareIntent = Intent.createChooser(sendIntent, "Compartilhar via")
+            startActivity(shareIntent)
+        }
+    } // Fecha o onCreate
+} // Fecha a classe DetalhesDisciplinaActivity

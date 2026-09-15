@@ -1,4 +1,4 @@
-package com.exemplo.meucurso
+package com.example.larissa
 
 import android.content.Intent
 import android.os.Bundle
