@@ -1,5 +1,6 @@
 package com.example.larissa
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -41,14 +42,13 @@ class DetalhesDisciplinaActivity : AppCompatActivity() {
         btnVoltar.setOnClickListener {
             finish()
         }
-
-        // 5. Ação do Botão Compartilhar (Desafio Final - Parte 10)
+// 5. Ação do Botão Compartilhar (Desafio Final - Parte 10)
         btnCompartilhar.setOnClickListener {
-            val sendIntent = Intent().apply {
-                action = Intent.ACTION_SEND
-                putExtra(Intent.EXTRA_TEXT, "Estou cursando $nome no curso!")
-                type = "text/plain"
-            }
+            val sendIntent = Intent()
+            sendIntent.action = Intent.ACTION_SEND
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "Estou cursando $nome no curso!")
+            sendIntent.type = "text/plain"
+
             val shareIntent = Intent.createChooser(sendIntent, "Compartilhar via")
             startActivity(shareIntent)
         }
